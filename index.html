@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173c3b">
+  <meta name="description" content="东南大学小七答疑室传承题库。按教材章节查阅工科数学分析与线性代数，阅读题目、想法与完整解答。">
+  <title>小七答疑室 · 传承题库</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23173c3b'/%3E%3Ctext x='20' y='29' text-anchor='middle' fill='%23fff' font-size='30' font-family='serif'%3E7%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./vendor/katex.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./vendor/katex.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <div id="shade" class="shade" hidden></div>
+  <aside class="sidebar" id="sidebar" aria-label="题库导航">
+    <a class="brand" href="#/home" aria-label="小七答疑室首页"><span class="brand-symbol">7<span>✦</span></span><span>小七答疑室<small>传承题库 · MATHEMATICS</small></span></a>
+    <button id="search-open" class="search-open"><span>⌕</span> 搜索题目与知识点<kbd>/</kbd></button>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom"><span class="online-dot"></span>一起把好题留下来。<small>东南大学 · 数学学院</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><button class="icon-button mobile-menu" id="menu" aria-label="打开导航" aria-expanded="false">☰</button><div id="breadcrumb">传承题库 <span>/</span> 阅读首页</div><div class="toolbar"><button class="icon-button" id="theme" aria-label="切换深色模式" title="切换深色模式">◐</button><span class="top-label">小七与你，一起求解</span></div></header>
+    <main id="main" tabindex="-1"><div class="loading">正在打开题库…</div></main>
+    <footer><span>小七答疑室 · 传承题库</span><span>让每一次解答，成为下一次思考的起点。</span></footer>
+  </div>
+  <dialog id="search-dialog" aria-label="搜索题库"><div class="search-input-row"><span>⌕</span><input id="search-input" type="search" placeholder="搜索题目、知识点或关键词…" autocomplete="off" aria-label="搜索题库"><button class="escape" id="search-close">关闭 <kbd>Esc</kbd></button></div><div id="search-results" aria-live="polite"></div><div class="search-foot">搜索当前已发布的题目与章节内容</div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
